@@ -55,7 +55,7 @@ export const updateEvent = async (req, res) => {
   }
 };
 
-export const partialUpdateEvent = async (req, res) => {
+export const patchEvent = async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;

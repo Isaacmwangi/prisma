@@ -55,21 +55,6 @@ export const updateEvent = async (req, res) => {
   }
 };
 
-export const patchEvent = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { body } = req;
-    const updatedEvent = await prisma.event.update({
-      where: { id: parseInt(id) },
-      data: body,
-    });
-    res.json(updatedEvent);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  }
-};
-
 export const deleteEvent = async (req, res) => {
   try {
     const { id } = req.params;

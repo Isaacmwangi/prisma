@@ -5,7 +5,6 @@ import {
   getEventById,
   createEvent,
   updateEvent,
-  patchEvent,
   deleteEvent,
 } from '../controllers/eventsController.mjs';
 import { createValidationSchema } from '../utils/validationSchema.mjs';
@@ -16,7 +15,6 @@ router.get('/api/events', getAllEvents);
 router.get('/api/events/:id', getEventById);
 router.post('/api/events', checkSchema(createValidationSchema), createEvent);
 router.put('/api/events/:id', updateEvent);
-router.patch('/api/events/:id', patchEvent);
 router.delete('/api/events/:id', deleteEvent);
 
 export default router;

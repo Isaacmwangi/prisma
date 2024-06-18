@@ -1,4 +1,4 @@
-// utils/validationSchema.mjs
+
 export const createValidationSchema = {
     title: {
         notEmpty: {
@@ -35,3 +35,4 @@ export const createValidationSchema = {
         },
     }
 };
+
